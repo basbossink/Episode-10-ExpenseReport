@@ -12,6 +12,10 @@ public class DinnerExpense extends Expense {
   boolean isMeal() {
     return true;
   }
+
+   String getName() {
+     return "Dinner";
+   }
 }
 
 

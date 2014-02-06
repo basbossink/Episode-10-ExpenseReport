@@ -12,6 +12,10 @@ public class CarRentalExpense extends Expense {
   boolean isMeal() {
     return false;
   }
+
+  String getName() {
+    return "Car Rental";
+  }
 }
 
 

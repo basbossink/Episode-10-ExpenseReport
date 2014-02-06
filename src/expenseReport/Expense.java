@@ -14,5 +14,7 @@ public abstract class Expense {
   abstract boolean isOverage();
 
   abstract boolean isMeal();
+
+  abstract String getName();
 }
 

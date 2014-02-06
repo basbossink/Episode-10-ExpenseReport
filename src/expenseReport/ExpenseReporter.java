@@ -1,12 +1,10 @@
 package expenseReport;
 
-import java.text.NumberFormat;
 import java.util.Locale;
 
 public class ExpenseReporter {
   ReportPrinter printer;
   private ExpenseReport report;
-  private ExpenseNamer namer = new ExpenseReportNamer();
 
   public ExpenseReporter(ExpenseReport report) {
     this.report = report;
@@ -35,9 +33,9 @@ public class ExpenseReporter {
 
   private void printExpense(Expense expense) {
     printer.print(String.format(Locale.US, "%s\t%s\t$%.02f\n",
-      expense.isOverage() ? "X" : " ",
-      namer.getName(expense),
-      penniesToDollars(expense.getAmount())));
+            expense.isOverage() ? "X" : " ",
+            expense.getName(),
+            penniesToDollars(expense.getAmount())));
   }
 
   private void printTotals() {
